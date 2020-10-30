@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/user_sign"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/signuptxt"
+        android:layout_width="186dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/sign_up"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <EditText
+        android:id="@+id/usernameedt"
+        android:layout_width="362dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/username"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="354dp"
+        android:autofillHints=""
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/emailedt"
+        android:layout_width="356dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:inputType="textShortMessage|textPersonName|text|textEmailAddress"
+        android:text="@string/email"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="448dp"
+        android:autofillHints=""
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pswdedit"
+        android:layout_width="354dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="536dp"
+        android:importantForAutofill="no"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/singupbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="616dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logoeeztravel"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="112dp"
+        android:contentDescription="@string/todo"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
