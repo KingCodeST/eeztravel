@@ -41,12 +41,31 @@
             android:textColor="#615E5E" />
 
         <EditText
-            android:id="@+id/passwordedt"
+            android:id="@+id/user_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/sign_password_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="#615E5E"
+            tools:text="PASSWORD" />
+
+        <EditText
+            android:id="@+id/user_sign_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
             android:autofillHints="" />
+
 
         <Button
             android:id="@+id/signbtn"
@@ -64,7 +83,7 @@
             android:text="@string/forgot_password" />
 
         <Button
-            android:id="@+id/signupbtn"
+            android:id="@+id/signup_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
