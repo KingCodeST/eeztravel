@@ -8,12 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class DatabaseHelper(context: Context):SQLiteOpenHelper(context,dbname,factory, version){
 
-    companion object{
-        internal val dbname ="userDb"
-        internal val factory =null
-        internal val version =1
-    }
-
     override fun onCreate(p0: SQLiteDatabase?) {
 
         p0?.execSQL("create table user(id integer primary key autoincrement,"+
@@ -29,6 +23,8 @@ class DatabaseHelper(context: Context):SQLiteOpenHelper(context,dbname,factory, 
         val db: SQLiteDatabase = writableDatabase
         val values: ContentValues = ContentValues()
         values.put("name", name)
+        values.put("email",email)
+        values.put("password",password)
 
         db.insert("user", null, values)
         db.close()
@@ -37,7 +33,7 @@ class DatabaseHelper(context: Context):SQLiteOpenHelper(context,dbname,factory, 
 
     fun userPresent(email: String,password:String): Boolean {
         val db =writableDatabase
-        val query ="select * from user where email = $email and password = $password"
+        val query ="select * from user where email = '$email' an password = '$password'"
         val cursor=db.rawQuery(query,null)
         if(cursor.count<=0){
             cursor.close()
@@ -46,6 +42,11 @@ class DatabaseHelper(context: Context):SQLiteOpenHelper(context,dbname,factory, 
         return true
     }
 
+    companion object{
+        internal val dbname ="userDb"
+        internal val factory =null
+        internal val version =1
+    }
 
 
 }

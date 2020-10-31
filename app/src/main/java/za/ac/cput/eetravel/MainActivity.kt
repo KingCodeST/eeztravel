@@ -25,21 +25,41 @@ class MainActivity : AppCompatActivity() {
             showRegisteration()
         }
 
+        signbtn.setOnClickListener {
+            if (handler.userPresent(user_sign_in.text.toString(),user_sign_pass.text.toString()))
+
+                Toast.makeText(this,"Login Success", Toast.LENGTH_SHORT).show()
+
+
+            else
+                Toast.makeText(this,"username or password is incorrect", Toast.LENGTH_SHORT).show()
+
+            }
+
+        user_sign_up_btn.setOnClickListener {
+
+            handler.insertUserData(sign_up_username.text.toString() ,sign_up_email.text.toString(),sign_up_password.text.toString())
+            showHome()
+        }
+
+
+//        showLogin()
+
     }
 
-    private fun showRegisteration(){
+   fun showRegisteration(){
         user_signup.visibility =View.VISIBLE
         content_main.visibility=View.GONE
         home_11.visibility=View.GONE
     }
 
-    private fun showLogin(){
-        user_signup.visibility =View.VISIBLE
-        content_main.visibility=View.GONE
+    fun showLogin(){
+        user_signup.visibility =View.GONE
+        content_main.visibility=View.VISIBLE
         home_11.visibility=View.GONE
     }
 
-    private fun showHome(){
+   fun showHome(){
         user_signup.visibility =View.GONE
         content_main.visibility=View.GONE
         home_11.visibility=View.VISIBLE

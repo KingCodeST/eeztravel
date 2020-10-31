@@ -20,4 +20,6 @@
     <string name="sign_up2">SIGN UP</string>
     <string name="todo2">TODO</string>
     <string name="user_signup_password" />
+    <string name="signup">SIGNUP</string>
+
 </resources>
